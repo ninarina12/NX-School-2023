@@ -279,9 +279,7 @@ def plot_classification_statistics(test_probabilities, incorrect, correct):
     return fig
 
 
-def plot_confusion_matrix(test_targets, test_predictions):
-    cm = confusion_matrix(test_targets, test_predictions, labels=range(5))
-    
+def plot_confusion_matrix(cm):
     fig, ax = plt.subplots(1,2, figsize=(3.15,3), gridspec_kw={'width_ratios': [1,0.05]})
     fig.subplots_adjust(wspace=0.1)
 
